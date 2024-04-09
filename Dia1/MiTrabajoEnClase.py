@@ -43,8 +43,62 @@ def myfunc():
 
 myfunc()
 #Conversion de tipos de variable (tipos de variables primitivos)
-
+#comvertir de cadena a entero
+Num_entero = int("10")
+print(Num_entero)
+print(type(Num_entero))
+#comvertir de cadena a flotante
+Num_flot=float("5.0")
+print(Num_flot)
+print(type(Num_flot))
+#comvertir de entero a cadena
+NCadena=str(16)
+print(NCadena)
+print(type(NCadena))
 #Bucles For y While
+#Bucle for 
+for s in range(4):
+  print(s)
+#Bucle While
+contador=0
+while contador < 4:
+  print(contador)
+  contador +=1
 
-#Funciones (4 Tipos)
+#Funciones
+#-función sin parámetros o retorno 
+def diHola():
+  print("Hello!")
+
+diHola()  # llamada a la función, 'Hello!' se muestra en la consola
+#-funcion con parametros y sin rotorno
+def holaConNombre(name):
+  print("Hello " + name + "!")
+
+holaConNombre("Diego")  # llamada a la función, 'Hello Ada!' se muestra en la consola
+#-función sin parametro y con retorno
+
+def obtener_saludo():
+  return "¡holaaaaa!"
+
+saludo= obtener_saludo()
+
+print(saludo," como esta")
+
+def obtener_numero():
+  return "16"
+#llamo la fncion sin parametros
+print("el numero obtenido es:",obtener_numero(),)
+
+
+#-función con parametros y con retono
+
+
+def multiplicar(a, b):
+  resultado= a* b
+  return resultado
+
+resultado_multiplica = multiplicar(2, 4)  # muestra 15 en la consola
+
+print("el resultado es: ", resultado_multiplica,)
 #Desarrollado por Garcia Rodriguez - C.C 1.093.780.794
