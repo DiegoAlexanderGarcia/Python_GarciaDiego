@@ -1,0 +1,3 @@
+#1. Al inicio, el programa dará la bienvenida y explicará la naturaleza de la Secuencia de Fibonacci, donde solicitará al usuario ingresar un valor entero "n", representando hasta qué término de la secuencia se generará. Aquí mostrará la secuencia de Fibonacci hasta el enésimo término ingresado por el usuario. Luego, preguntará si el usuario desea continuar o salir, donde si se decide salir, el programa se detendrá; de lo contrario, se repetirá el proceso.
+print("Bienvenidooooooooo")
+print("A continoacion te explicare la sucesión de Fibonacci:\nEn matemática, la sucesión de Fibonacci se trata de una serie infinita\nde números naturales que empieza con un 0 y un 1 y continúa añadiendo \nnúmeros que son la suma de los dos anteriores: 0, 1, 1, 2, 3, 5")
