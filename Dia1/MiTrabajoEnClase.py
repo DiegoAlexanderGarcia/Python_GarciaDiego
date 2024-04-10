@@ -101,4 +101,5 @@ def multiplicar(a, b):
 resultado_multiplica = multiplicar(2, 4)  # muestra 15 en la consola
 
 print("el resultado es: ", resultado_multiplica,)
+#actualizar
 #Desarrollado por Garcia Rodriguez - C.C 1.093.780.794
