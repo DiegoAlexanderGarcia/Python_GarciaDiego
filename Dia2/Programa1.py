@@ -20,5 +20,5 @@ while True:
         a, b = b, a + b
 
     play_again = input('\n¿Quieres jugar de nuevo? (sí/no): ')
-    if play_again.lower() != 'sí':
+    if play_again.lower() != 'si':
         break
