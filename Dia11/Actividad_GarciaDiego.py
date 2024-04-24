@@ -16,7 +16,7 @@ def menu():
         print("5. Salir")
         
         opcion = input("Seleccione una opción: ")
-        nombres_eventos = {evento["type"] for evento in datos}  # Conjunto de nombres de eventos
+        nombres_eventos = {evento["id"] for evento in datos}  # Conjunto de nombres de eventos
         
         if opcion == "1":
             if datos:
@@ -27,12 +27,12 @@ def menu():
                  print("No hay eventos para mostrar.")
 
         elif opcion == "2":
-            nombre = input("Ingrese el nombre del evento: ")
+            id_evento = input("Ingrese el ID del evento: ")
             # Verificar si el evento ya existe
-            if nombre in nombres_eventos:
+            if id_evento in nombres_eventos:
                 print("¡El evento ya existe!")
             else:
-                id_evento = input("Ingrese el id del evento: ")
+                nombre = input("Ingrese el nombre del evento: ")
                 nuevo_evento = {"type": nombre, "id": id_evento }
                 datos.append(nuevo_evento)
                 nombres_eventos.add(nombre)  # Agregar el nombre del evento al conjunto
@@ -40,9 +40,9 @@ def menu():
              
         elif opcion == "3":
             if datos:
-                nombre_actualizar = input("Ingrese el nombre del evento a actualizar: ")
+                id_actualizar = input("Ingrese el ID del evento a actualizar: ")
                 for evento in datos:
-                    if evento["type"] == nombre_actualizar:
+                    if evento["id"] == id_actualizar:
                         nuevo_nombre = input("Ingrese el nuevo nombre del evento: ")
                         evento["type"] = nuevo_nombre
                         print("Evento actualizado exitosamente.")
@@ -54,11 +54,11 @@ def menu():
 
         elif opcion == "4":
             if datos:
-                nombre_eliminar = input("Ingrese el nombre del evento a eliminar: ")
+                id_eliminar = input("Ingrese el ID del evento a eliminar: ")
                 for evento in datos:
-                    if evento["type"] == nombre_eliminar:
+                    if evento["id"] == id_eliminar:
                         datos.remove(evento)
-                        nombres_eventos.remove(nombre_eliminar)
+                        nombres_eventos.remove(id_eliminar)
                         print("Evento eliminado exitosamente.")
                         break
                 else:
