@@ -1,6 +1,6 @@
 import json
 
-large_file = "C:/Users/usuario/Desktop/programacion/Python_GarciaDiego/Dia11/largefile.json"
+large_file = "largefile.json"
 
 with open(large_file, encoding="utf-8") as archivo:
     datos = json.load(archivo)
@@ -21,7 +21,7 @@ def menu():
         if opcion == "1":
             if datos:
                 print("--- Eventos ---") 
-                for i, evento in enumerate(datos, 1):
+                for i, evento in enumerate (datos, 1):
                     print(f"{i}. {evento['type']} - {evento['id']}")
             else:
                  print("No hay eventos para mostrar.")
@@ -43,8 +43,9 @@ def menu():
                 id_actualizar = input("Ingrese el ID del evento a actualizar: ")
                 for evento in datos:
                     if evento["id"] == id_actualizar:
-                        nuevo_nombre = input("Ingrese el nuevo nombre del evento: ")
+                        nuevo_nombre = input("Ingrese el nuevo tipo del evento: ")
                         evento["type"] = nuevo_nombre
+                        evento[""]
                         print("Evento actualizado exitosamente.")
                         break
                 else:
